@@ -134,7 +134,7 @@ jQuery(document).ready(function($) {
         var xhr = new XMLHttpRequest();
         
         // Configure the request
-        xhr.open("POST", "order-form/order.php", true);
+        xhr.open("GET", "order-form/order.php", true);
         
         // Set up an event handler to handle the response
         xhr.onload = function () {
