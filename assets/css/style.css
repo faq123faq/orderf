@@ -1,0 +1,68 @@
+#order-form {
+    padding: 60px 0;
+  }
+  
+  #order-form .form #sendmessage {
+    color: #011c40;
+    border: 1px solid #011c40;
+    display: none;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  #order-form .form #sendmessage.show,
+  #order-form .form #errormessage.show,
+  #order-form .form .show {
+    display: block;
+  }
+
+  #order-form .form input,
+  #order-form .form textarea {
+    padding: 10px 14px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 15px;
+  }
+  
+  #order-form .form button[type="submit"] {
+    background: #011c40;
+    border: 0;
+    padding: 10px 40px;
+    color: #fff;
+    transition: 0.4s;
+    cursor: pointer;
+    width: 100%;
+    transition: all ease ease-in-out 1s;
+  }
+  
+  #order-form .form button[type="submit"]:hover {
+    background: #ffffff;
+    color: #011c40;
+    transition: all ease ease-in-out 1s;
+    border: 1px solid #011c40;
+  }
+ #order-form label{
+  color: #2e2e2e !important;
+  font-weight: 500;
+  font-size: 12px;
+ }
+ .form-control{
+  outline: none !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  border-radius: 5px !important;
+ }
+ 
+ .form-control:focus{
+  border-color: #011c40 !important;
+  box-shadow: none !important;
+ }
+ #order-form .form .validation {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}

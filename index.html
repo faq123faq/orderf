@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+        
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+    <section id="order-form" class="section-bg wow fadeInUp">
+      <div class="container">
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+            
+            <form class="contactForm">
+              <!-- Client Information -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name:</label>
+                  <input class = "form-control formname" type="text" id="name" name="name" placeholder = "Enter Your Name" required data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="email">Your Email:</label>
+                  <input class = "form-control" type="email" id="email" name="email" placeholder = "Enter Your Email" required data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="phone">Phone Number:</label>
+                  <input class = "form-control" type="tel" id="phone" name="phone" pattern="[0-9,+]+" placeholder = "Enter Your Contact Number" required data-rule="minlen:4" data-msg="Please enter a valid contact number" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Company Name:</label>
+                  <input class = "form-control" type="text" id="company" name="company" placeholder = "Enter Your Company / Business Name"  required data-rule="minlen:4" data-msg="Please enter a valid company / Business name" />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <!-- Project Details -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="mainCategory">Select a Category:</label>
+                    <select id="mainCategory" name="mainCategory" onchange="showSubcategories()" class="form-control" required data-rule="catacheck" data-msg="Please write some details about your project" >
+                      <option disabled selected value="">Select your project type</option>
+                      <option value="web">Web</option>
+                      <option value="apps">Apps</option>
+                      <option value="software">Software</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <div id="subCategorySection">
+                    <label for="subCategory">Subcategory:</label>
+                    <select id="subCategory" name="subCategory" class="form-control" required data-rule="catacheck" data-msg="Please write some details about your project" >
+                      <option disabled selected value="">Please select the project type first</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <label for="website-description">Brief Description of Your Project:</label>
+              <textarea class="form-control" id="website-description" name="website-description" rows="4" placeholder = "Brief Description of Your Project"  required data-rule="minlen:4" data-msg="Please write some details about your project" ></textarea>
+              <div class="validation"></div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="budget">Budget Range:</label>
+                  <input class = "form-control" type="text" id="budget" name="budget" placeholder = "Enter your budget (e.g., $0 - Unlimited)"  required data-rule="minlen:4" data-msg="Minimum budget is $5" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="file-upload">Upload Relevant Files (e.g., project brief, logo, etc.):</label>
+                  <input type="file" id="file-upload" name="file-upload" class="form-control" multiple>
+
+                </div>
+              </div>
+              <!-- Submit Button -->
+              <button type="submit" id="button">Submit Order</button>
+            </form>
+            
+        </div>  
+      </div>
+    </section>
+
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/order-form/order.js"></script>           
+</body>
+</html>
